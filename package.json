@@ -1,0 +1,27 @@
+{
+  "name": "triyugi-narayan",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Triyugi Narayan Mohotsav - wedding management web app",
+  "scripts": {
+    "deps": "node scripts/install-deps.mjs",
+    "deps:extras": "node scripts/install-deps.mjs --extras",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "npm@11.13.0",
+  "devDependencies": {
+    "prettier": "^3.10.1",
+    "turbo": "^2.11.13",
+    "typescript": "^5.9.3"
+  }
+}

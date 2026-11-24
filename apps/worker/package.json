@@ -1,0 +1,23 @@
+{
+  "name": "@triyugi/worker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch --env-file=../../.env src/index.ts",
+    "start": "node --env-file=../../.env dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "echo \"No worker tests yet\""
+  },
+  "dependencies": {
+    "@triyugi/db": "*",
+    "@triyugi/messaging": "*",
+    "@triyugi/shared": "*",
+    "mongoose": "^9.12.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

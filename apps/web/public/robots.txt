@@ -1,0 +1,5 @@
+# Private family site: keep search engines out for now.
+# When the public landing page launches, allow "/" and keep these private paths blocked:
+#   /rsvp/, /live/, /gallery/, /dashboard, /login
+User-agent: *
+Disallow: /
