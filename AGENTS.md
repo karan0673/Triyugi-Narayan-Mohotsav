@@ -59,12 +59,16 @@ one before building a feature. If code and docs disagree, ask before changing ei
 
 ## Frontend conventions
 - Mobile-first. Minimum 16px text and 44px touch targets.
-- Design tokens are in `apps/web/src/app/globals.css`. Style: stone and slate, matte, premium.
-  **Never use pink, green, yellow, orange, purple, or bright blue.** Errors use the muted brick tone.
-- Fonts: Cormorant Garamond (headlines), Inter (body). Thin line icons (Lucide).
+- Design tokens are in `apps/web/src/app/globals.css`. Theme: deep burgundy with champagne gold, premium and calm
+  (from the approved Stitch design). Use the theme classes (`card`, `btn-gold`, `btn-outline`, `heading-*`) and
+  colour tokens (`wine-*`, `gold*`, `pearl*`). **Do not introduce other accent colours** (no pink, green, blue,
+  purple, or bright orange). Keep errors muted, not bright red.
+- Fonts: EB Garamond (headlines), Inter (body). Thin line icons (Lucide).
 - Next.js 16: route `params` are a Promise (`await params`). The browser calls `/api/v1/...` on the same
   origin (rewritten to the API).
 - Screens are designed in Google Stitch first; match the design rather than inventing new layouts.
+- Landing page text lives in `apps/web/src/content/landing.ts`. Describe only real features. No invented
+  statistics, reviews, or technical claims. Demo data must carry a "Sample" tag.
 - Use shared zod schemas with react-hook-form; format dates with `formatDateIST`.
 
 ## Code style
